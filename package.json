@@ -6,9 +6,10 @@
     "scripts": {
         "start": "cross-env PORT=7070 gulp start --development",
         "build": "gulp build --production",
-        "lint-styles": "stylelint './src/sass/**/*.scss' --syntax scss --fix"
+        "lint-styles": "stylelint './src/sass/**/*.scss' --syntax scss --fix",
+        "deploy": "gh-pages -d dist"
     },
-    "homepage": "https://Naiks90.github.io/HW1",
+    "homepage": "https://vasiltelyachuk.github.io/market1/",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/luxplanjay/gulp-boilerplate.git"
