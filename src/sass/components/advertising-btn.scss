@@ -1,0 +1,10 @@
+.advertising__btn {
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+    @include typography('Proxima Nova', 24px, 36px, 600, $text-third-color);
+    width: 250px;
+    padding: 4px 70px 4px 71px;
+    border: 3px solid #ffffff;
+    box-sizing: border-box;
+}

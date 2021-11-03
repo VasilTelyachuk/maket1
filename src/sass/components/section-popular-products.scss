@@ -1,0 +1,295 @@
+.popular-products {
+    background-color: $section-popular-products-bg;
+    padding: 40px 0px 50px 0px;
+    margin-bottom: 50px;
+
+    @media (min-width: 768px) {
+        & {
+            padding: 118px 0px 91px 0px;
+            margin-bottom: 94px;
+            overflow: hidden;
+        }
+    }
+}
+
+.telephone-call {
+    display: none;
+
+    @media (min-width: 1920px) {
+        & {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: $telephone-call-bg-color;
+            position: fixed;
+            z-index: 6;
+            right: 52px;
+            top: 816px;
+        }
+    }
+}
+
+.popular-products__title {
+    @include typography('Proxima Nova', 18px, 30px, 400, $section-title-color);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin: 0px;
+    
+    &::after {
+        content: '';
+        display: block;
+        width: 120px;
+        border: 1px solid $section-title-decoration-color;
+        margin: 10px auto 39px;
+    }
+
+    @media (min-width: 1244px) {
+        position: relative;
+        & {
+            @include typography('Proxima Nova', 48px, 73px, 400, $section-title-color);
+            text-align: left;
+            margin-bottom: 80px;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100vw;
+                border: 1px solid $section-title-decoration-color;
+                margin: 0px;
+                position: absolute;
+                left: 170px;
+            }
+        }
+    }
+}
+
+.products-list {
+    width: 300px;
+    list-style: none;
+    padding: 0px;
+    margin: 0px auto;
+
+    @media (min-width: 768px) {
+        width: 620px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: 1244px) {
+        width: 716px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: 1464px) {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.products-list__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: $section-decoration-color;
+}
+
+.products-list__item:not(:nth-last-child(1)) {
+
+    @media (max-width: 767px) {
+    margin-bottom: 30px;
+    }
+
+    @media (min-width: 1464px) {
+        margin-bottom: 0px;
+        // margin-right: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1463px) {
+    .products-list__item:not(:nth-last-child(-n+2)) {
+        margin-bottom: 20px;
+    }
+
+    .products-list__item:not(:nth-last-child(2n+1)) {
+margin-right: 20px;
+    }
+}
+        
+.products-list__icon {
+    display: block;
+    width: 300px;
+    height: 197px;
+    // height: auto;
+    margin-bottom: 29px;
+
+    @media (min-width: 1244px) {
+        width: 343px;
+        height: 214px;
+        // height: auto;
+        margin-bottom: 23px;
+    }
+}
+
+.products-list__title {
+    @include typography($primary-font, 18px, 18px, 700, $text-primary-color);
+    margin: 0px;
+    margin-bottom: 17px;
+
+    @media (min-width: 1244px) {
+    @include typography($primary-font, 18px, 22px, 700, $text-primary-color);
+    margin: 0px;
+    margin-bottom: 14px;
+    }
+}
+
+.span-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 21px;
+    
+    @media (min-width: 1244px) {
+    margin-bottom: 20px;
+    }
+}
+
+.relevant-product-price {
+    margin-right: 18px;
+}
+
+.relevant-product-price__text {
+    @include typography($primary-font, 14px, 17px, 700, $section-popular-products-relevant-color);
+}
+
+.relevant-product-price__price {
+    @include typography($primary-font, 24px, 30px, 700, $section-popular-products-relevant-color);
+}
+
+.not-relevant-product-price__text {
+    @include typography($primary-font, 12px, 15px, 400, $text-secondary-color);
+    text-decoration-line: line-through;
+}
+
+.not-relevant-product-price__price {
+    @include typography($primary-font, 16px, 19px, 400, $text-secondary-color);
+}
+
+.products-list__btn {
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+    @include typography('Proxima Nova', 14px, 20px, 400, $text-secondary-color);
+    width: 200px;
+    height: 35px;
+    border: 1px solid $text-secondary-color;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+
+    @media (min-width: 1244px) {
+    @include typography('Proxima Nova', 14px, 21px, 400, $text-secondary-color);
+    width: 135px;
+    height: 30px;
+    }
+}
+
+.popular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $section-decoration-color;
+    width: 140px;
+    height: 30px;
+    transform: rotate(-43.26deg);
+    position: absolute;
+    left: -32px;
+    top: 18px;
+}
+
+.popular__text {
+    @include typography($primary-font, 10px, 13px, 600, $text-fifth-color);
+    text-transform: uppercase;
+
+    @media (min-width: 1244px) {
+    @include typography($primary-font, 12px, 15px, 600, $text-fifth-color);
+    }  
+}
+
+.like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: $section-popular-products-like-btn-bg;
+    position: absolute;
+    top: 14px;
+    right: 13px;
+
+    @media (min-width: 1244px) {
+        width: 29px;
+        height: 29px; 
+        top: 16px;
+        right: 15px;
+    }
+}
+
+.like__link {
+    display: flex;
+}
+
+.like__icon {
+    fill: $section-popular-products-btn;
+}
+
+.slaider-btn {
+    display: none;
+
+    @media (min-width: 1580px) {
+        display: flex;
+        position: absolute;
+        background-color: transparent;
+        border-style: solid;
+        fill: transparent;
+        border: none;
+        padding: 0px;
+        stroke: $section-popular-products-btn;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1244px) {
+    .relevant-product {
+    display: none;
+    }
+
+    .offer-text {
+        @include typography($primary-font, 14px, 17px, 700, $text-fourth-color);
+        text-decoration-line: none;
+    }
+
+    .offer-price {
+        @include typography($primary-font, 24px, 30px, 700, $text-fourth-color);
+        text-decoration-line: none;
+    }
+
+    .slaider-btn-left {
+        left: -45px;
+        top: 40%;
+    }
+
+    .slaider-btn-right {
+        right: -45px;
+        top: 42%;
+    }
+
+    .slaidbar {
+        position: relative;
+    }
+}

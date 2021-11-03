@@ -1,0 +1,108 @@
+.gallety__title {
+    @include typography($primary-font, 18px, 30px, 400, $section-title-color);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px 0px 39px 0px;
+    &::after {
+        content: "";
+        display: block;
+        width: 120px;
+        border: 1px solid $text-fourth-color;
+        margin: auto;
+        margin-top: 6px;
+    }
+    @media (min-width: 1244px) {
+        @include typography($primary-font, 48px, 79px, 400, $section-title-color);
+        &::after {
+            width: 746px;
+        }
+        margin-bottom: 80px;
+    }
+}
+
+.gallery__list {
+    padding: 0px;
+    list-style: none;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 300px;
+    margin-bottom: 60px;
+    @media (min-width: 768px) and (max-width: 1243px) {
+        max-width: 620px;
+    }
+    @media (min-width: 1244px) and (max-width: 1463px) {
+        max-width: 716px;
+        margin-bottom: 68px;
+    }
+    @media(min-width: 1464px) {
+        max-width: 100%;
+        margin-bottom: 68px;
+    }
+}
+
+.gallery__item {
+    position: relative;
+    @media(max-width: 767px), (min-width: 1244px) and (max-width: 1463px) {
+        &:not(:nth-last-of-type(-n+2)) {
+            margin-bottom: 20px;
+        }
+    }
+    @media(min-width: 768px) and (max-width: 1243px) {
+        &:not(:nth-last-of-type(-n+4)) {
+            margin-bottom: 20px;
+        }
+    }
+    @media(min-width: 1464px) {
+        &:not(:nth-last-of-type(-n+4)) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.gallery__img {
+    display: flex;
+    width: 140px;
+    height: 140px;
+    @media (min-width: 1244px) {
+        width: 343px;
+        height: 343px;
+    }
+}
+
+.gallery__link {
+    text-decoration: none;
+    // position: relative;
+}
+
+.gallery__name {
+    display: flex;
+    // text-decoration: none;
+    @include typography($primary-font, 10px, 15px, 400, $language-secondary-color);
+    text-transform: uppercase;
+    height: 35px;
+    width: 140px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 95px;
+    background-color: $text-third-color;
+    &::after {
+        margin-left: 5px;
+        content: "(200)";
+        display: inline-block;
+        @include typography($third-font, 9px, 15px, 300, $background-dekor-contackt);
+        text-transform: none;
+    }
+    @media (min-width: 1244px) {
+        height: 38px;
+        width: 343px;
+        top: 275px;
+        @include typography($primary-font, 18px, 27px, 600, $language-secondary-color);
+        &::after {
+            @include typography($primary-font, 12px, 15px, 400, $background-dekor-contackt);
+        }
+    }
+}

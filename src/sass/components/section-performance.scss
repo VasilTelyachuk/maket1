@@ -1,0 +1,177 @@
+.performance {
+    display: flex;
+    margin-bottom: 50px;
+    @media (min-width: 1244px) {
+        margin-bottom: 89px;
+    }
+}
+
+.promotion-container {
+    display: flex;
+    @include bg-image('../images/Group24.jpg', center, cover, no-repeat);
+    position: relative;
+    width: 100%;
+    min-height: 432px;
+    margin: 0px auto;
+    @media (min-resolution: 192px), (min-resolution: 2dppx) {
+        & {
+            background-image: url(../images/Group24@2x.jpg);
+        }
+    }
+    @media (min-width: 1244px) {
+        & {
+            display: flex;
+            @include bg-image('../images/Слой1.jpg', left, cover, no-repeat);
+            width: 36.459%;
+            min-height: 644px;
+        }
+        @media (min-resolution: 192px),
+        (min-resolution: 2dppx) {
+            & {
+                background-image: url(../images/Слой1@2x.jpg);
+            }
+        }
+    }
+}
+
+.promotion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.promotion__title {
+    display: block;
+    @include typography('Proxima Nova', 24px, 36px, 700, $text-primary-color);
+    text-transform: uppercase;
+    margin: 0px 0px 2px;
+    @media (min-width: 1244px) {
+        & {
+            @include typography('Proxima Nova', 44px, 66px, 700, $text-primary-color);
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.promotion__text {
+    @include typography('Proxima Nova', 10px, 16.2px, 600, $text-secondary-color);
+    letter-spacing: 0.06em;
+    margin-bottom: 50px;
+    @media (min-width: 1244px) {
+        & {
+            @include typography('Proxima Nova', 18px, 29px, 600, $text-secondary-color);
+            margin-bottom: 39px;
+        }
+    }
+}
+
+.section-text {
+    margin-bottom: 51px;
+    @media (min-width: 1244px) {
+        .section-text {
+            margin-bottom: 62px;
+        }
+    }
+}
+
+.promotion__title-logo {
+    @include typography('Proxima Nova', 18px, 29.16px, 700, $text-fourth-color);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0px;
+    margin-bottom: 47px;
+    &::before {
+        content: '';
+        display: block;
+        width: 91px;
+        border: 1px solid $section-title-decoration-color;
+        margin: 0px auto 17px;
+    }
+    @media (min-width: 1244px) {
+        & {
+            @include typography('Proxima Nova', 40px, 64.8px, 700, $text-fourth-color);
+            margin-bottom: 34px;
+            &::before {
+                width: 200px;
+                margin: 0px auto 16px;
+            }
+        }
+    }
+}
+
+.promotion__text-about {
+    @include typography('Proxima Nova', 14px, 23.02px, 400, $text-primary-color);
+    text-transform: uppercase;
+    @media (min-width: 1244px) {
+        & {
+            @include typography('Proxima Nova', 24px, 39.46px, 400, $text-primary-color);
+        }
+    }
+}
+
+.advertising-left-container,
+.advertising-right-container {
+    display: none;
+    @media (min-width: 1244px) {
+        &, & {
+            display: flex;
+            position: relative;
+            margin: 0px auto;
+        }
+    }
+}
+
+@media (min-width: 1244px) {
+    .advertising-left-container {
+        @include bg-image('../images/270.jpg', center, cover, no-repeat);
+        width: 31.771%;
+        min-height: 644px;
+        @media (min-resolution: 192px), (min-resolution: 2dppx) {
+            & {
+                background-image: url(../images/270@2x.jpg);
+            }
+        }
+    }
+    .advertising-right-container {
+        @include bg-image('../images/Photo.jpg', right, cover, no-repeat);
+        width: 31.771%;
+        min-height: 644px;
+        @media (min-resolution: 192px), (min-resolution: 2dppx) {
+            & {
+                background-image: url(../images/Photo@2x.jpg);
+            }
+        }
+    }
+    .advertising {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 644px;
+        background-color: rgba($text-fifth-color, 0.3);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .advertising__title {
+        @include typography('Proxima Nova', 36px, 44px, 700, $text-third-color);
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0px 0px 17px;
+    }
+    .advertising__text {
+        @include typography('Roboto', 24px, 29px, 700, $text-third-color);
+        margin-bottom: 27px;
+    }
+    .advertising__price {
+        @include typography('Roboto', 36px, 43.85px, 700, $text-third-color);
+        margin-bottom: 27px;
+    }
+}

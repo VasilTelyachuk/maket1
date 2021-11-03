@@ -1,0 +1,20 @@
+//Utils
+@import './utils/variables.scss';
+@import './utils/mixins.scss';
+//Base Styles
+@import './base/normalize';
+@import './base/fonts.scss';
+// Componets
+@import './components/header.scss';
+@import './components/lang-select__btn.scss';
+@import './components/nav.scss';
+@import './components/section-performance.scss';
+@import './components/advertising-btn.scss';
+@import './components/section-popular-products.scss';
+@import './components/section-gallery.scss';
+@import './components/section-advantage.scss';
+@import './components/section-delivery.scss';
+@import './components/section-own-import.scss';
+@import './components/footer.scss';
+//Main page layout
+@import './layout/common.scss';

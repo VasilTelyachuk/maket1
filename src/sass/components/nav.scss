@@ -1,0 +1,94 @@
+.nav {
+    background-color: $background-form-header;
+}
+
+.nav__list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    min-height: 56px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+}
+
+.nav__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    @include typography($primary-font, 13px, 16px, 600, $text-primary-color);
+    border-bottom: 1px solid rgba($nav-decoration-primary-color, 0);
+    &:hover {
+        border-bottom: 1px solid rgba($nav-decoration-primary-color, 1);
+    }
+}
+
+.shop-icon__link {
+    display: flex;
+    &:not(:nth-last-of-type(1)) {
+        margin-right: 35px;
+    }
+}
+
+.basket {
+    position: relative;
+    &::after {
+        content: '5';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: $nav-decoration-secondary-color;
+        right: -5px;
+        top: -5px;
+        border-radius: 50%;
+        position: absolute;
+        box-sizing: border-box;
+        @include typography($primary-font, 11px, 12px, 400, $text-third-color);
+        text-align: center;
+        padding-top: 2px;
+    }
+}
+
+.sub-menu__list {
+    display: none;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    background-color: $background-form-header;
+    z-index: 5;
+}
+
+.sub-menu__item {
+    box-sizing: border-box;
+    width: 320px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sub-menu__img {
+    margin-right: 12px;
+    display: flex;
+}
+
+.sub-menu__link {
+    @include typography($primary-font, 14px, 48px, 400, $text-fifth-color);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.sub-menu {
+    position: relative;
+    &:focus-within {
+        .sub-menu__list {
+            display: block;
+        }
+    }
+}

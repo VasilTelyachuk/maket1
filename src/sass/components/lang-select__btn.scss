@@ -1,0 +1,26 @@
+.lang-select {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+}
+
+.lang-select__item {
+    &:not(:nth-last-of-type(1)) {
+        margin-right: 10px;
+    }
+}
+
+.lang-select__btn {
+    padding: 0px;
+    background-color: rgba(#fff, 0);
+    border: none;
+    height: 20px;
+    @include typography($primary-font, 14px, 21px, 300, $language-primary-color);
+    text-transform: uppercase;
+    cursor: pointer;
+    &:focus {
+        border-bottom: 1px solid $nav-decoration-primary-color;
+        @include typography($primary-font, 14px, 21px, 400, $language-secondary-color);
+    }
+}

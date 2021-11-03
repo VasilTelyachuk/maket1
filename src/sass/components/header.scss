@@ -1,0 +1,138 @@
+.container {
+    padding: 0px 10px;
+    max-width: 1464px;
+    margin: 0 auto;
+    @media (max-width: 1243px) {
+        max-width: 950px;
+    }
+    // @media (max-width: 1467px) and (min-width: 1244px)
+    // {
+    //     padding: 0px 10px;
+    // }
+}
+
+.header-lmenu {
+    @media (max-width: 1243px) {
+        display: none;
+    }
+}
+
+.header-smenu {
+    @media (min-width: 1244px) {
+        display: none;
+    }
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 19px;
+    margin-bottom: 12px;
+}
+
+.logo {
+    @media (min-width: 1244px) {
+        margin-right: 88px;
+    }
+}
+
+.header__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    flex-grow: 1;
+}
+
+.header__form {
+    width: 380px;
+    height: 29px;
+    position: relative;
+}
+
+.header__form-search {
+    @include typography($primary-font, 13px, 20px, 400, $text-primary-color);
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0px 10px 0px 15px;
+    background-color: $background-form-header;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.header__form-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    padding: 0px;
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 40px;
+    background-color: $background-form-header;
+    cursor: pointer;
+}
+
+.header__contackt {
+    display: flex;
+    align-items: center;
+}
+
+.header__contackt-tel {
+    @include typography($primary-font, 21px, 32px, 400, $text-secondary-color);
+    display: block;
+}
+
+.header__contackt-text {
+    display: block;
+    width: 136px;
+    height: 42px;
+    @include typography($primary-font, 14px, 21px, 400, $text-secondary-color);
+    letter-spacing: 0.05em;
+}
+
+.header__contackt-deckor {
+    width: 1px;
+    height: 29px;
+    background-color: $background-dekor-contackt;
+    margin: 0px 20px;
+}
+
+.header__user {
+    align-items: center;
+    display: flex;
+}
+
+.header__user-link {
+    @include typography($primary-font, 13px, 20px, 400, $nav-decoration-primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.header__user-svg {
+    margin-right: 20px;
+}
+
+.header-smenu__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 0px 10px;
+    min-height: 44px;
+}
+
+.header-smenu__link {
+    display: flex;
+    align-items: center;
+    &:not(:nth-last-of-type(1)) {
+        margin-right: 20px;
+    }
+}
+
+.header-smenu__nav {
+    display: flex;
+}

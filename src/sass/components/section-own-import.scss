@@ -1,0 +1,51 @@
+.own-import {
+    margin: 0px auto;
+    padding-top: 50px;
+    @media (min-width: 768px) {
+        &::before {
+            content: '';
+            display: block;
+            border-bottom: 1px solid $section-own-import-border-color;
+            width: 581px;
+            margin: 0px auto 51px auto;
+            padding-top: 116px;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            border-top: 1px solid $section-own-import-border-color;
+            width: 581px;
+            margin: auto;
+            padding-bottom: 107px;
+        }
+    }
+}
+
+.own-import__title {
+    @include typography('Proxima Nova', 22px, 25px, 400, $text-secondary-color);
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 50px;
+
+    @media (min-width: 768px) {
+        @include typography('Proxima Nova', 32px, 47px, 400, $text-secondary-color);
+        margin-bottom: 6px;
+    }
+}
+
+.own-import__text {
+    @include typography('Proxima Nova', 12px, 18px, 400, $text-secondary-color);
+    margin: 0px;
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+        max-width: 879px;
+        text-align: left;
+        @include typography('Proxima Nova', 14px, 21px, 400, $text-secondary-color);
+        margin: auto;
+        margin-bottom: 54px;
+    }
+}
